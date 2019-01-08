@@ -161,13 +161,13 @@ int RichTextLabel::_process_line(ItemFrame *p_frame, const Vector2 &p_ofs, int &
 
 	int height = get_size().y;
 
-	if (p_mode != PROCESS_CACHE) {
+	//if (p_mode != PROCESS_CACHE) {
 
-		ERR_FAIL_INDEX_V(line, l.offset_caches.size(), 0);
-		line_ofs = l.offset_caches[line];
-	}
+		//ERR_FAIL_INDEX_V(line, l.offset_caches.size(), 0);
+		//line_ofs = l.offset_caches[line];
+	//}
 
-	if (p_mode == PROCESS_CACHE) {
+	//if (p_mode == PROCESS_CACHE) {
 		l.offset_caches.clear();
 		l.height_caches.clear();
 		l.ascent_caches.clear();
@@ -175,7 +175,7 @@ int RichTextLabel::_process_line(ItemFrame *p_frame, const Vector2 &p_ofs, int &
 		l.char_count = 0;
 		l.minimum_width = 0;
 		l.maximum_width = 0;
-	}
+	//}
 
 	int wofs = margin;
 	int spaces_size = 0;
